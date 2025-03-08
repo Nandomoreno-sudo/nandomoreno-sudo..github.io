@@ -1,0 +1,240 @@
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%; /* Asegura que el body ocupe el 100% de la pantalla */
+}
+
+/* Barra de navegación */
+header {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0; /* Elimina cualquier padding del header */
+    margin: 0;  /* Elimina cualquier margen */
+    position: absolute; /* Pone el header sobre la imagen */
+    top: 0;
+    width: 100%;
+    z-index: 2;  /* Hace que la barra de navegación quede por encima de la imagen */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 100px 0;  /* Ajusta el padding para darle altura a la barra de navegación */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+.boton {
+    text-decoration: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #4b94dd;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #0056b3;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Sección principal con fondo */
+.inicio {
+    background: url('images/fondo2.jpg') no-repeat center center/cover;
+    color: rgb(11, 11, 11);
+    height: 100vh;  /* Hace que la imagen ocupe el 100% de la pantalla */
+    padding-top: 200px; /* Elimina el espacio adicional que pudiera haber en la parte superior */
+    text-align: center;
+}
+
+.inicio .contenido {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.inicio .contenido2 {
+    max-width: 1000px;
+    font-size: 1.2em; /* Tamaño general de texto dentro de .contenido2 */
+    margin: 0 auto;
+    padding-top: 50px;
+    background-color: rgba(0, 0, 0, 0.5);  /* Fondo semi-transparente */
+    border-radius: 15px;  /* Bordes redondeados de la caja */
+    padding: 60px;  /* Aumentamos el espaciado dentro de la caja */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);  /* Sombra para darle profundidad */
+}
+
+/* Logo en general */
+.logo {
+    display: block;
+    margin: 0 auto;
+    max-width: 850px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Logo solo en la página de contacto */
+.logo.contacto {
+    max-width: 80px;
+    width: auto; /* El logo ocupará el 100% del ancho del contenedor pero con el tamaño máximo de 150px */
+    margin: 0 auto 20px; /* Centrado automático y espacio debajo */
+    display:flex;
+    border-radius: 8px;
+    object-fit: cover; /* Asegura que el logo se comporte como un bloque centrado */
+}
+
+.inicio h1 {
+    font-size: 3em;  /* Hacemos que el tamaño del h1 sea más grande */
+    color: white;    /* Aseguramos que el color del texto sea blanco */
+    margin-top: 20px;
+}
+
+.inicio p {
+    font-size: 2em;  /* Aumentamos el tamaño de la fuente del párrafo */
+    color: white;    /* Aseguramos que el color del texto sea blanco */
+    margin-top: 10px;
+}
+
+/* Galería de proyectos */
+.proyectos {
+    padding: 50px 20px;
+    text-align: center;
+    padding-top: 250px;
+}
+
+.proyectos h2 {
+    font-size: 3em;
+    margin-bottom: 30px;
+}
+
+/* Caja para el título "Obras Realizadas" */
+.titulo-caja {
+    background-color: #007bff; /* Color azul */
+    color: white; /* Letras en blanco */
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 30px; /* Añade un poco de espacio debajo de la caja */
+    border-radius: 10px; /* Bordes redondeados */
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+}
+
+/* Estilo de la galería de proyectos */
+.galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.proyecto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.proyecto p {
+    margin-top: 10px;
+}
+
+/* Formulario de contacto */
+.contacto {
+    background: url('images/fondo9.jpeg') no-repeat center center/cover; /* Imagen de fondo */
+    height: 100vh; /* La sección ocupará toda la pantalla */
+    display: flex;
+    justify-content: center;  /* Centra el formulario horizontalmente */
+    align-items: center;      /* Centra el formulario verticalmente */
+    padding-top: 0; 
+}
+
+.formulario-contenedor {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para el formulario */
+    padding: 40px;
+    padding-top: 100px; /* Ajustado para que el contenido no se desborde */
+    height: 100vh; /* Hace que la caja ocupe el 100% de la altura disponible */
+    border-radius: 15px;
+    max-width: 1000px; /* Ancho máximo del formulario */
+    width: 100%; /* El formulario se adapta al 100% de su contenedor */
+    color: rgb(235, 232, 232);
+    text-align: center;
+    box-sizing: border-box; /* Asegura que el padding no se salga del contenedor */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el formulario verticalmente */
+}
+
+.contacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contacto label {
+    font-size: 1.2em;
+}
+
+.contacto input,
+.contacto textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contacto button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contacto button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .galeria {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .inicio h1 {
+        font-size: 2.5em;
+    }
+
+    .inicio p {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+}
