@@ -31,6 +31,8 @@ nav ul {
     list-style-type: none;
     display: flex;
     justify-content: center;
+    padding: 0;  /* Aseguramos que no haya padding extra */
+    margin: 0;  /* Aseguramos que no haya margen extra */
 }
 
 nav ul li {
@@ -144,6 +146,22 @@ nav ul li a {
     /* Ajustamos el logo en pantallas más pequeñas */
     .logo {
         max-width: 80%;  /* Reducimos el tamaño del logo */
+    }
+
+    /* Ajustes en la barra de navegación para móviles */
+    nav ul {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+        align-items: center; /* Centra los elementos verticalmente */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Ajustamos los márgenes para que los elementos no se peguen entre sí */
+    }
+
+    /* Si tienes botones específicos como .boton en el menú */
+    .boton {
+        width: 100%;  /* Hacer que los botones ocupen todo el ancho */
+        text-align: center;  /* Centrar el texto dentro de los botones */
     }
 }
 
