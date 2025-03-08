@@ -128,6 +128,12 @@ nav ul li a {
     text-align: center;
     padding-top: 250px;
 }
+.proyectos .logo {
+    max-width: 200px; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+    margin: 0 auto 20px; /* Centra el logo y añade un margen inferior */
+    display: block;
+}
 
 .proyectos h2 {
     font-size: 3em;
