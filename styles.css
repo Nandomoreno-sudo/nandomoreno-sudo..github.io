@@ -134,8 +134,9 @@ nav ul li a {
     margin-bottom: 30px;
 }
 
+/* Caja para el título "Obras Realizadas" */
 .titulo-caja {
-    background-color: #007bff;
+    background-color: #007bff; 
     color: white;
     padding: 20px;
     text-align: center;
@@ -144,9 +145,10 @@ nav ul li a {
     text-transform: uppercase;
 }
 
+/* Estilo de la galería de proyectos */
 .galeria {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);  /* Tres columnas por defecto en pantallas grandes */
     gap: 20px;
 }
 
@@ -171,7 +173,7 @@ nav ul li a {
 }
 
 .formulario-contenedor {
-    background-image: url('ruta-a-tu-imagen.jpg');
+    background-image: url('images/fondo9.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -221,8 +223,23 @@ nav ul li a {
     background-color: #0056b3;
 }
 
-/* Responsividad para móviles */
+/* Responsividad para pantallas medianas (tablets) */
+@media (max-width: 1024px) {
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);  /* Dos columnas en tablets */
+    }
+}
+
+/* Responsividad para pantallas pequeñas (móviles) */
 @media (max-width: 768px) {
+    .galeria {
+        grid-template-columns: 1fr;  /* Una columna en móviles */
+    }
+
+    .proyectos h2 {
+        font-size: 2.5em;
+    }
+
     .inicio {
         padding-top: 100px;  /* Ajustamos el padding superior */
         background-attachment: scroll;  /* Desactivamos 'fixed' en móviles */
@@ -258,46 +275,8 @@ nav ul li a {
         width: 100%;
         text-align: center;
     }
-
-    /* Ajustes en la galería de proyectos */
-    .galeria {
-        grid-template-columns: 1fr 1fr;  /* Solo dos columnas en móviles */
-    }
-
-    .proyectos h2 {
-        font-size: 2.5em;
-    }
 }
 
 /* Estilos para pantallas más pequeñas (móviles) */
 @media (max-width: 480px) {
-    .inicio h1 {
-        font-size: 2em;
-    }
-
-    .inicio p {
-        font-size: 1.2em;
-    }
-
-    .inicio .contenido {
-        width: 95%;
-    }
-
-    .inicio .contenido2 {
-        font-size: 1em;
-        padding: 40px;
-    }
-
-    .proyectos h2 {
-        font-size: 2em;
-    }
-
-    .galeria {
-        grid-template-columns: 1fr;  /* Solo una columna */
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-}
+    .ini
