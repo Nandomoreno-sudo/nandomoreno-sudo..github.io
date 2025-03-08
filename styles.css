@@ -167,6 +167,10 @@ nav ul li a {
 }
 
 .formulario-contenedor {
+    background-image: url('ruta-a-tu-imagen.jpg');
+    background-size: cover; /* Asegura que cubra toda el área */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Hace que la imagen permanezca fija al hacer scroll */
     background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para el formulario */
     padding: 40px;
     padding-top: 100px; /* Ajustado para que el contenido no se desborde */
