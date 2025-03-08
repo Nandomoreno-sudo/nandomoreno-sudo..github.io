@@ -165,6 +165,7 @@ nav ul li a {
     }
 }
 
+/* Estilos para pantallas más pequeñas (móviles) */
 @media (max-width: 480px) {
     /* Ajustes adicionales para pantallas muy pequeñas */
     .inicio h1 {
@@ -177,5 +178,10 @@ nav ul li a {
 
     .inicio .contenido {
         width: 95%;  /* Asegura que el contenido no se desborde */
+    }
+
+    nav ul {
+        flex-direction: column; /* Cambia la dirección a columna en pantallas pequeñas */
+        align-items: center; /* Centra los elementos verticalmente */
     }
 }
